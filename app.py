@@ -76,13 +76,7 @@ if uploaded_image is not None:
         'Telephone': telephone,
         'Total Amount': total_amount
     })
-    # Evaluate Address Extraction
-    ground_truth_address = "16424 Timothy Mission Markville, AK 58294 US"
-        
-        # CER Calculation
-    cer = editdistance.eval(ground_truth_address, address) / len(ground_truth_address)
-
-    st.write(f"CER for Address: {cer:.2f}")
+    
 
     # Create a DataFrame from the accumulated data
     df = pd.DataFrame(st.session_state.data)
